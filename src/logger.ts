@@ -82,6 +82,10 @@ export default class Logger {
     this.log(message, 'trace')
   }
 
+  warn(message: string) {
+    this.log(message, 'warn')
+  }
+
   error(message: string) {
     this.log(message, 'error')
   }
