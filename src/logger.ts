@@ -28,6 +28,7 @@ export default class Logger {
     this.logLevel = logLevel
     this.bufferSize = bufferSize
 
+    if (!fs.existsSync(this.path)) fs.mkdirSync(this.path, { recursive: true })
     fs.writeFileSync(path.join(this.path, `${this.name}.log`), '')
   }
 
@@ -49,8 +50,6 @@ export default class Logger {
     
     this.cache = [];
     this.writing = true;
-
-    if (!fs.existsSync(this.path)) fs.mkdirSync(this.path, { recursive: true })
 
     fs.appendFileSync(path.join(this.path, `${this.name}.log`), text)
 
