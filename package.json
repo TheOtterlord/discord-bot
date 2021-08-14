@@ -1,15 +1,11 @@
 {
-  "name": "duxcore-discord",
+  "name": "discord-bot",
   "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {
     "start": "tsc && node .",
     "build": "tsc",
     "dev": "nodemon index.ts"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/duxcore/DiscordBot.git"
   },
   "nodemonConfig": {
     "ignore": [
